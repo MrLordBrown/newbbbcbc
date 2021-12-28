@@ -561,16 +561,16 @@ function city() {
 function setit() {
   var rapped = document.getElementsByClassName('wrapper');
   var imged = document.getElementsByClassName('img');
-  for (var j = 0; j < rapped.length; j++) {
-    var image = data[j - 1].Image;
+  for (var j = 1; j < rapped.length; j++) {
+    var zill = data[j].Image;
 
     rapped[j].style.backgroundImage =
       'url(https://raw.githubusercontent.com/MrLordBrown/bcbc/main/s (' +
-      image +
+      zill +
       ').png)';
-    imged.style.backgroundImage =
+    imged[j].style.backgroundImage =
       'url(https://raw.githubusercontent.com/MrLordBrown/bcbc/main/s (' +
-      image +
+      zill +
       ').png)';
   }
 }
