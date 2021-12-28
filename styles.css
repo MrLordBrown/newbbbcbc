@@ -8,7 +8,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 327px;
+  width: 99vw;
 }
 
 .pic-container {
@@ -17,14 +17,14 @@
 
 .parent {
   position: relative;
-  width: 109px;
-  height: 109px;
+  width: 25vw;
+  height: 25vw;
   margin: 0 auto;
 }
 
 .wrapper {
-  width: 109px;
-  height: 109px;
+  width: 25vw;
+  height: 25vw;
   cursor: pointer;
   position: absolute;
   overflow: hidden;
@@ -37,8 +37,8 @@
 }
 
 .wrapper.open {
-  width: 330px;
-  height: 330px;
+  width: 33vw;
+  height: 33vw;
   translate transition: transform 375ms, width 375ms, height 275ms 100ms;
 }
 
@@ -48,9 +48,9 @@
   left: -9999px;
   right: -9999px;
   transform-origin: top;
-  width: 330px;
+  width: 25vw;
   transform: scale(0.62);
-  height: 330px;
+  height: 25vw;
   border-radius: 3px;
   background: #fff;
   overflow: hidden;
@@ -62,32 +62,20 @@
 }
 
 .wrapper .img {
-  height: 180px;
+  height: 10vw;
   background-size: cover;
   background-position: center;
 }
 
-.thumb-1 .img {
-  background-image: url(http://i.imgur.com/UGQA9bu.jpg);
-}
-
-.thumb-2 .img {
-  background-image: url(https://timesjourneys.files.wordpress.com/2015/11/day9-iran-shirkuh-timesjourneys2.jpg?w=1200&h=550&crop=1);
-}
-
-.thumb-3 .img {
-  background-image: url(http://cdn-image.travelandleisure.com/sites/default/files/styles/tnl_redesign_article_landing_page/public/1453920892/DUBAI-554088081-ABOVE0116.jpg?itok=dcoZnCrc);
-}
-
 .text {
-  padding: 30px;
+  padding: 0;
 }
 
 .text .line {
-  height: 13px;
+  height: 1vh;
   background: #999;
   opacity: 0.7;
-  margin-top: 20px;
+  margin-top: 1vh;
 }
 
 .title {

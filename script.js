@@ -13,11 +13,8 @@ function wrappy() {
   this.classList.toggle('open');
 }
 
-// Import stylesheets
-import './style.css';
-
 // Write Javascript code!
-const appDiv = document.getElementById('app');
+const appDiv = document.getElementById('appDiv');
 
 var data = [
   {
@@ -506,7 +503,6 @@ var data = [
 ];
 
 var count = Object.keys(data).length;
-var image = data[i - 1].Image;
 
 function city() {
   for (var i = 1; i < count; i++) {
@@ -524,10 +520,6 @@ function city() {
     var rapClass = document.createAttribute('class');
     rapper.setAttributeNode(rapClass);
     rapClass.value = 'wrapper';
-    rapper.style.backgroundImage =
-      'url(https://raw.githubusercontent.com/MrLordBrown/bcbc/main/s (' +
-      image +
-      ').png)';
 
     var cont = document.createElement('div');
     var contClass = document.createAttribute('class');
@@ -538,10 +530,6 @@ function city() {
     var izClass = document.createAttribute('class');
     iz.setAttributeNode(izClass);
     izClass.value = 'img';
-    iz.style.backgroundImage =
-      'url(https://raw.githubusercontent.com/MrLordBrown/bcbc/main/s (' +
-      image +
-      ').png)';
 
     var tx = document.createElement('div');
     var txClass = document.createAttribute('class');
@@ -559,10 +547,10 @@ function city() {
     subtitle.setAttributeNode(subtitleClass);
     subtitleClass.value = 'line subtitle';
 
+    cont.appendChild(iz);
     tx.appendChild(subtitle);
     tx.appendChild(title);
     cont.appendChild(tx);
-    cont.appendChild(iz);
     rapper.appendChild(cont);
     parent.appendChild(rapper);
     container.appendChild(parent);
@@ -570,4 +558,22 @@ function city() {
   }
 }
 
+function setit() {
+  var rapped = document.getElementsByClassName('wrapper');
+  var imged = document.getElementsByClassName('img');
+  for (var j = 0; j < rapped.length; j++) {
+    var image = data[j - 1].Image;
+
+    rapped[j].style.backgroundImage =
+      'url(https://raw.githubusercontent.com/MrLordBrown/bcbc/main/s (' +
+      image +
+      ').png)';
+    imged.style.backgroundImage =
+      'url(https://raw.githubusercontent.com/MrLordBrown/bcbc/main/s (' +
+      image +
+      ').png)';
+  }
+}
+
 city();
+setit();
