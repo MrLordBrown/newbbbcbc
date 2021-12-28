@@ -1,16 +1,16 @@
 var wrapit = document.getElementsByClassName('wrapper');
 
 for (var i = 0; i < wrapit.length; i++) {
-  wrapit[i].addEventListener('click', wrappy);
-}
-function wrappy() {
-  var w = this.style.zindex;
-  if (w == 0) {
-    w = 10;
-  } else {
-    w = 0;
-  }
-  this.classList.toggle('open');
+  wrapit[i].addEventListener('click', function () {
+    var w = wrapit[i].style.zindex;
+    if (w == 0) {
+      w = 10;
+    } else {
+      w = 0;
+    }
+    wrapit[i].classList.toggle('open');
+    console.log(wrapit[i].classList);
+  });
 }
 
 // Write Javascript code!
@@ -506,6 +506,7 @@ var count = Object.keys(data).length;
 
 function city() {
   for (var i = 1; i < count; i++) {
+    var zill = data[i].Image;
     var container = document.createElement('div');
     var picClass = document.createAttribute('class');
     container.setAttributeNode(picClass);
@@ -526,10 +527,16 @@ function city() {
     cont.setAttributeNode(contClass);
     contClass.value = 'content';
 
-    var iz = document.createElement('div');
+    var iz = document.createElement('img');
     var izClass = document.createAttribute('class');
     iz.setAttributeNode(izClass);
     izClass.value = 'img';
+    var srcClass = document.createAttribute('src');
+    iz.setAttributeNode(srcClass);
+    srcClass.value =
+      'https://raw.githubusercontent.com/MrLordBrown/bcbc/main/s (' +
+      zill +
+      ').png';
 
     var tx = document.createElement('div');
     var txClass = document.createAttribute('class');
