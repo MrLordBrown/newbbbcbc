@@ -24,7 +24,6 @@
   width: 25vw;
   height: auto;
   position: fixed;
-  z-index: 500;
   margin-top: 0vh;
   margin-left: 74vw;
   opacity: 0.5;
@@ -38,7 +37,6 @@
   margin-top: 10vh;
   font-family: 'Lacquer', cursive;
   display: none;
-  z-index: 5;
   background-color: black;
   color: white;
   font-size: 2vh;
@@ -63,7 +61,6 @@ img {
   display: none;
   width: 90vw;
   height: auto;
-  z-index: 5;
   position: fixed;
   margin-left: 4vw;
   margin-right: 4vw;
@@ -109,7 +106,6 @@ img {
   animation-duration: 6s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  z-index: 1000;
   background-color: white;
 }
 
@@ -123,7 +119,6 @@ img {
   animation-iteration-count: 1;
   animation-direction: alternate-reverse;
   animation-fill-mode: backwards;
-  z-index: 999;
   background-color: white;
 }
 
@@ -134,7 +129,6 @@ img {
   display: inline-grid;
   font-size: 5vh;
   width: 100vw;
-  margin-top: -10vh;
   height: 10vh;
   grid-template-areas: 'about gallery map';
   justify-items: center;
@@ -196,19 +190,20 @@ article {
 
 .pic-container {
   float: left;
-  z-index: -1000;
+  top: 10vh;
 }
 
 .parent {
+  top: 10vh;
   position: relative;
-  width: 25vw;
-  height: 25vw;
+  width: 50vw;
+  height: 75vw;
   margin: 3px auto;
 }
 
 .wrapper {
-  width: 25vw;
-  height: 25vw;
+  width: 50vw;
+  height: 75vw;
   cursor: pointer;
   position: absolute;
   overflow: hidden;
@@ -216,22 +211,23 @@ article {
 }
 
 .wrapper.open {
-  width: 25vw;
-  height: 25vw;
+  width: 50vw;
+  height: 75vw;
 }
 
 .wrapper div.content {
   position: absolute;
-  margin: auto;
   transform-origin: top;
-  width: 25vw;
-  height: 25vw;
+  width: 50vw;
+  height: 75vw;
   border-radius: 3px;
   overflow: hidden;
+  margin: 1vw;
 }
 
 .wrapper .img {
-  height: 25vw;
+  height: auto;
+  width: 50vw;
   background-size: cover;
   background-position: center;
 }
@@ -241,16 +237,16 @@ article {
 }
 
 .text .line {
-  height: 1vh;
+  height: 2vh;
   background: #999;
   opacity: 0.7;
-  margin-top: 1vh;
+  margin: 1vw;
 }
 
 .title {
-  width: 80%;
+  width: auto;
 }
 
 .subtitle {
-  width: 60%;
+  width: auto;
 }

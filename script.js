@@ -505,7 +505,7 @@ var data = [
 var count = Object.keys(data).length;
 
 function city() {
-  for (var i = 1; i < count; i++) {
+  for (var i = 0; i < count; i++) {
     var zill = data[i].Image;
     var container = document.createElement('div');
     var picClass = document.createAttribute('class');
@@ -547,7 +547,7 @@ function city() {
     var titleClass = document.createAttribute('class');
     title.setAttributeNode(titleClass);
     titleClass.value = 'line title';
-    title.innerHTML = data[i - 1].BuildingName;
+    title.innerHTML = data[i].BuildingName;
 
     var subtitle = document.createElement('div');
     var subtitleClass = document.createAttribute('class');
@@ -555,8 +555,8 @@ function city() {
     subtitleClass.value = 'line subtitle';
 
     cont.appendChild(iz);
-    tx.appendChild(subtitle);
     tx.appendChild(title);
+    tx.appendChild(subtitle);
     cont.appendChild(tx);
     rapper.appendChild(cont);
     parent.appendChild(rapper);
@@ -565,22 +565,4 @@ function city() {
   }
 }
 
-function setit() {
-  var rapped = document.getElementsByClassName('wrapper');
-  var imged = document.getElementsByClassName('img');
-  for (var j = 1; j < rapped.length; j++) {
-    var zill = data[j].Image;
-
-    rapped[j].style.backgroundImage =
-      'url(https://raw.githubusercontent.com/MrLordBrown/bcbc/main/s (' +
-      zill +
-      ').png)';
-    imged[j].style.backgroundImage =
-      'url(https://raw.githubusercontent.com/MrLordBrown/bcbc/main/s (' +
-      zill +
-      ').png)';
-  }
-}
-
 city();
-setit();
