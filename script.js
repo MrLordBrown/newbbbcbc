@@ -512,21 +512,6 @@ function city() {
     container.setAttributeNode(picClass);
     picClass.value = 'pic-container';
 
-    var parent = document.createElement('div');
-    var parentClass = document.createAttribute('class');
-    parent.setAttributeNode(parentClass);
-    parentClass.value = 'parent';
-
-    var rapper = document.createElement('div');
-    var rapClass = document.createAttribute('class');
-    rapper.setAttributeNode(rapClass);
-    rapClass.value = 'wrapper';
-
-    var cont = document.createElement('div');
-    var contClass = document.createAttribute('class');
-    cont.setAttributeNode(contClass);
-    contClass.value = 'content';
-
     var iz = document.createElement('img');
     var izClass = document.createAttribute('class');
     iz.setAttributeNode(izClass);
@@ -554,13 +539,10 @@ function city() {
     subtitle.setAttributeNode(subtitleClass);
     subtitleClass.value = 'line subtitle';
 
-    cont.appendChild(iz);
+    container.appendChild(iz);
     tx.appendChild(title);
     tx.appendChild(subtitle);
-    cont.appendChild(tx);
-    rapper.appendChild(cont);
-    parent.appendChild(rapper);
-    container.appendChild(parent);
+    container.appendChild(tx);
     appDiv.appendChild(container);
   }
 }

@@ -14,19 +14,29 @@
 }
 
 #logo {
-  grid-area: 'logo';
+  grid-area: logo;
   height: 100%;
   width: auto;
 }
 
 #aboutUs {
-  grid-area: 'about';
+  grid-area: about;
+  font-size: 1vw;
+  padding: 1vw;
 }
 
 #appDiv {
   display: flex;
+  grid-area: content;
   flex-direction: column;
-  grid-area: 'content';
-  align-items: center;
-  align-content: center;
+  flex-shrink: 50vw;
+}
+
+.pic-container {
+width: 100%;
+}
+
+img {
+  width: 45vw;
+  height: auto;
 }
