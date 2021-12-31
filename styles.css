@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: inline-grid;
+  grid-template-areas:
+    'about logo'
+    'content content';
+  grid-template-columns: 75vw 25vw;
+  grid-template-rows: 25vh 75vh;
+}
+
+#logo {
+  grid-area: 'logo';
+  height: 100%;
+  width: auto;
+}
+
+#aboutUs {
+  grid-area: 'about';
+}
+
+#appDiv {
+  display: flex;
+  flex-direction: column;
+  grid-area: 'content';
+  align-items: center;
+  align-content: center;
+}
